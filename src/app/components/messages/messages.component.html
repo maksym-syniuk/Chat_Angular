@@ -1,0 +1,25 @@
+<!-- <section class="conversation" *ngIf="usersService.currentUser; else selectUser"> -->
+<section class="conversation">
+    <div class="conversation__header">
+        <app-user [online]="currentUser.online" [imagePath]="currentUser.imagePath">
+        </app-user>
+        <span>{{currentUser.name}} {{currentUser.surname}}</span>
+    </div>
+
+    <div #scroll class="conversation__body">
+        <app-message [currentUser]="currentUser"></app-message>
+    </div>
+
+    <div class="conversation__message-input">
+        <i class="fas fa-location-arrow"></i>
+        <input type="text" placeholder="Type your message" (keyup.enter)="sendMessage($event)" />
+    </div>
+</section>
+<!-- 
+<ng-template #selectUser>
+    <section class="conversation">
+        <div class="conversation__select">
+            Please, select a user to open chat!
+        </div>
+    </section>
+</ng-template> -->
