@@ -1,0 +1,20 @@
+<div class="chat">
+    <h1 class="chat__title">Chats</h1>
+
+    <cdk-virtual-scroll-viewport itemSize="50" class="chat__users">
+        <div *cdkVirtualFor="let user of usersService.getUsersArray()">
+            <div class="chat__message" (click)="onChatSelected(user)">
+                <app-user [online]="user.online" [imagePath]="user.imagePath"></app-user>
+
+                <div class="message__info">
+                    <span class="message__info_title">{{user.name}} {{user.surname}}</span>
+                    <p class="message__info_content">
+                        {{user.messages[user.messages.length - 1].message.substr(0,40)}}
+                    </p>
+                </div>
+
+                <span class="message__date">{{user.messages[user.messages.length - 1].date | date}}</span>
+            </div>
+        </div>
+    </cdk-virtual-scroll-viewport>
+</div>

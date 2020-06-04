@@ -1,0 +1,49 @@
+.user {
+    padding: 20px;
+    display: inline-block;
+    .fa {
+        &-user {
+            color: #777e86;
+            border: 1px solid transparent;
+            border-radius: 50%;
+            overflow: hidden;
+            font-size: 3rem;
+            background-color: #ebecf1;
+            padding: 5px 5px 0 5px;
+        }
+
+        &-check {
+            position: relative;
+            bottom: 0px;
+            right: 15px;
+            color: #97c19c;
+            border: 2px solid #97c19c;
+            padding: 2px;
+            border-radius: 50%;
+            font-size: 0.9rem;
+        }
+
+        &-times-circle {
+            position: relative;
+            bottom: 0px;
+            right: 15px;
+            color: red;
+            padding: 2px;
+            font-size: 1.5rem;
+        }
+    }
+
+    &__image {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

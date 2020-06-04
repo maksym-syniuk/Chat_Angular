@@ -1,0 +1,18 @@
+<div class="user">
+    <span *ngIf="!validImage; else userImage">
+        <i class="fas fa-user"></i>
+    </span>
+    <ng-template #userImage>
+        <div class="user__image">
+            <img [src]="imagePath" onerror="null" [alt]="imagePath">
+        </div>
+    </ng-template>
+
+    <span *ngIf="online && online !== undefined">
+        <i class="fas fa-check"></i>
+    </span>
+
+    <span *ngIf="!online && online !== undefined">
+        <i class="far fa-times-circle"></i>
+    </span>
+</div>
