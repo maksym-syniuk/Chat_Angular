@@ -2,7 +2,7 @@
     <h1 class="chat__title">Chats</h1>
 
     <cdk-virtual-scroll-viewport itemSize="50" class="chat__users">
-        <div *cdkVirtualFor="let user of usersService.getUsersArray()">
+        <div *cdkVirtualFor="let user of usersService.getUsersArray() | searchFilter: searchString">
             <div class="chat__message" (click)="onChatSelected(user)">
                 <app-user [online]="user.online" [imagePath]="user.imagePath"></app-user>
 

@@ -135,62 +135,148 @@ export class UsersService {
       ]
     },
 
-    // {
-    //   id: 4,
-    //   name: 'Velazquez',
-    //   date: new Date(),
-    //   online: true,
-    // },
+    {
+      id: 4,
+      name: 'Janet',
+      surname: 'Simpson',
+      online: true,
+      imagePath: 'https://i.pinimg.com/564x/c3/12/36/c3123650da72ec2c60f7568d33c65ce5.jpg',
+      messages: [
+        {
+          sender: 'user',
+          date: new Date('2020-02-12T12:30:00'),
+          message: `Quickly come to the meeting room 1B, we have a big server issue!`
+        },
+        {
+          sender: 'author',
+          date: new Date('2020-02-12T12:31:00'),
+          message: `I\'m having breakfast right now, can\'t you wait for 10 minutes?`
+        },
+        {
+          sender: 'user',
+          date: new Date('2020-02-12T12:32:00'),
+          message: `We are losing money! Quick!`
+        },
+      ]
+    },
 
-    // {
-    //   id: 5,
-    //   name: 'Janet',
-    //   surname: 'Simpson',
-    //   date: new Date(),
-    //   online: true,
-    //   imagePath: 'https://i.pinimg.com/564x/c3/12/36/c3123650da72ec2c60f7568d33c65ce5.jpg'
-    // },
+    {
+      id: 5,
+      name: 'Scarlet',
+      surname: 'Gomez',
+      online: false,
+      imagePath: 'https://wilmingtonbiz.s3.amazonaws.com/gwbj_0906_techmain.jpg',
+      messages: [
+        {
+          sender: 'user',
+          date: new Date('2017-08-24T11:17:00'),
+          message: `Hi! Are you there?`
+        },
+        {
+          sender: 'user',
+          date: new Date('2017-08-24T11:19:00'),
+          message: `Hello? Hello?!?`
+        },
+        {
+          sender: 'author',
+          date: new Date('2017-08-24T11:19:00'),
+          message: `Hi! I\'m here! I'm here`
+        },
+        {
+          sender: 'user',
+          date: new Date('2017-08-24T11:20:00'),
+          message: `Good.`
+        },
+        {
+          sender: 'author',
+          date: new Date('2017-08-24T11:20:00'),
+          message: `What's up, Scarlet?`
+        },
+        {
+          sender: 'user',
+          date: new Date('2017-08-24T11:21:00'),
+          message: `Nothing...`
+        },
+        {
+          sender: 'author',
+          date: new Date('2017-08-24T11:21:00'),
+          message: `OMG`
+        },
+      ]
+    },
 
-    // {
-    //   id: 6,
-    //   name: 'Scarlet',
-    //   surname: 'Gomez',
-    //   date: new Date(),
-    //   online: false,
-    //   imagePath: 'https://specials-images.forbesimg.com/imageserve/5d70b0225b52ce0008826162/960x0.jpg?fit=scale'
-    // },
+    {
+      id: 6,
+      name: 'Wes',
+      surname: 'Doyle',
+      online: true,
+      imagePath: `https://upload.wikimedia.org/wikipedia/commons/4/48/Outdoors-man-portrait_%28cropped%29.jpg`,
+      messages: [
+        {
+          sender: 'author',
+          date: new Date('2019-09-09T11:17:00'),
+          message: `Hey Wes, we’ve stocked our shelves with assorted mint cookie
+              treats for you. Visit your local KookieU store. Hurry! This flavor is for a limited time only.?`
+        },
+        {
+          sender: 'author',
+          date: new Date('2019-09-09T11:19:00'),
+          message: `Wes? Are you there?`
+        },
 
-    // {
-    //   id: 7,
-    //   name: 'Bobby',
-    //   surname: 'Jackson',
-    //   date: new Date(),
-    //   online: true,
-    // },
-    // {
-    //   id: 8,
-    //   name: 'Backie',
-    //   surname: 'Thompson',
-    //   date: new Date(),
-    //   online: false,
-    //   imagePath: 'https://wilmingtonbiz.s3.amazonaws.com/gwbj_0906_techmain.jpg'
-    // },
-    // {
-    //   id: 9,
-    //   name: 'Shannon',
-    //   surname: 'Tetcher',
-    //   date: new Date(),
-    //   online: true,
-    //   imagePath: 'https://here is incorrect url'
-    // },
-    // {
-    //   id: 10,
-    //   name: 'Max',
-    //   surname: 'Sinyuk',
-    //   date: new Date(),
-    //   online: true,
-    //   imagePath: 'https://www.economist.com/sites/default/files/images/2019/05/blogs/open-future/20190504_opp502.jpg'
-    // }
+      ]
+    },
+
+    {
+      id: 7,
+      name: 'Sarah',
+      surname: 'McGregor',
+      online: true,
+      imagePath: 'https://www.economist.com/sites/default/files/images/2019/05/blogs/open-future/20190504_opp502.jpg',
+      messages: [
+        {
+          sender: 'user',
+          date: new Date('2020-06-11T19:44:00'),
+          message: `So, what are your plans for this weekend?`
+        },
+        {
+          sender: 'author',
+          date: new Date('2020-06-11T19:44:00'),
+          message: `I don’t know. Do you want to get together or something?`
+        },
+        {
+          sender: 'user',
+          date: new Date('2020-06-11T19:45:00'),
+          message: `How about going to see a movie? Cinemax 26 on Carson Boulevard is showing Enchanted.`
+        },
+        {
+          sender: 'author',
+          date: new Date('2020-06-11T19:45:00'),
+          message: `That sounds like a good idea. Maybe we should go out to eat beforehand.`
+        },
+        {
+          sender: 'user',
+          date: new Date('2020-06-11T19:45:00'),
+          message: `Let’s meet at Summer Pizza House. I have not gone there for a long time.`
+        },
+        {
+          sender: 'author',
+          date: new Date('2020-06-11T19:45:00'),
+          message: `Good idea again. I heard they just came up with a new pizza. It should
+           be good because Summer Pizza House always has the best pizza in town.`
+        },
+        {
+          sender: 'user',
+          date: new Date('2020-06-11T19:45:00'),
+          message: `When should we meet?`
+        },
+        {
+          sender: 'author',
+          date: new Date('2020-06-11T19:45:00'),
+          message: `Well, the movie is shown at 2:00PM, 4:00PM, 6:00PM and 8:00PM.`
+        },
+      ]
+    },
   ];
   currentUser: IUser;
   currentUserChange: Subject<IUser> = new Subject<IUser>();

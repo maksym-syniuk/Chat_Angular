@@ -2,12 +2,12 @@ import { IUser } from './../interfaces/IUser';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'search'
+  name: 'searchFilter'
 })
 export class SearchPipe implements PipeTransform {
 
   transform(users: IUser[], search: string = ''): IUser[] {
-    if (!search.trim()) {
+    if (!users || !search || !search.trim()) {
       return users;
     }
     return users.filter(user => {
@@ -15,4 +15,17 @@ export class SearchPipe implements PipeTransform {
     });
   }
 
+  // if (!users) {
+  //   return null;
+  // }
+  // if (!search) {
+  //   return null;
+  // }
+
+  // search = search.toLowerCase();
+
+  // return search.filter(function (item) {
+  //   return JSON.stringify(item).toLowerCase().includes(args);
+  // });
+  // }
 }
