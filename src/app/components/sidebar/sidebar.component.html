@@ -1,8 +1,8 @@
 <section class="sidebar">
     <div class="sidebar__header">
         <app-user [online]="true" imagePath="none"></app-user>
-        <app-search-form></app-search-form>
+        <app-search-form (searchStringChange)="updateValue($event)"></app-search-form>
     </div>
 
-    <app-chat></app-chat>
+    <app-chat [searchString]="searchString"></app-chat>
 </section>

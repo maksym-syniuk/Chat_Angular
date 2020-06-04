@@ -1,14 +1,14 @@
 import { UsersService } from './../../shared/services/users.service';
 import { IUser } from './../../shared/interfaces/IUser';
-import { Component, OnInit, ViewChild, ElementRef, AfterViewChecked, OnDestroy } from '@angular/core';
-import { Subject, Subscribable, Observer, Observable, Subscription } from 'rxjs';
+import { Component, ViewChild, ElementRef, AfterViewChecked, OnDestroy } from '@angular/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.scss']
 })
-export class MessagesComponent implements OnInit, AfterViewChecked, OnDestroy {
+export class MessagesComponent implements AfterViewChecked, OnDestroy {
   @ViewChild('scroll') private messagesContainer: ElementRef;
   currentUser: IUser;
   subscription: Subscription = new Subscription();
@@ -20,9 +20,6 @@ export class MessagesComponent implements OnInit, AfterViewChecked, OnDestroy {
     this.subscription = usersService.currentUserChange.subscribe(value => {
       this.currentUser = value;
     });
-  }
-
-  ngOnInit(): void {
   }
 
   sendMessage(event: Event): void {
