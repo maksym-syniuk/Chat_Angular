@@ -14,18 +14,4 @@ export class SearchPipe implements PipeTransform {
       return user.name.toLowerCase().indexOf(search.toLowerCase()) !== -1;
     });
   }
-
-  // if (!users) {
-  //   return null;
-  // }
-  // if (!search) {
-  //   return null;
-  // }
-
-  // search = search.toLowerCase();
-
-  // return search.filter(function (item) {
-  //   return JSON.stringify(item).toLowerCase().includes(args);
-  // });
-  // }
 }

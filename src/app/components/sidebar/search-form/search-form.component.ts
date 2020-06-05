@@ -10,7 +10,7 @@ export class SearchFormComponent implements OnInit {
   searchString: '';
   constructor() { }
 
-  update(value) {
+  update(value: string) {
     this.searchStringChange.emit(value);
   }
 

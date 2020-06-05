@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-sidebar',
@@ -10,7 +10,7 @@ export class SidebarComponent {
   constructor() {
   }
 
-  updateValue(value) {
+  updateValue(value: string) {
     this.searchString = value;
   }
 }
