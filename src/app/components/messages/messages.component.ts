@@ -10,6 +10,7 @@ import { Subscription } from 'rxjs';
 })
 export class MessagesComponent implements AfterViewChecked, OnDestroy {
   @ViewChild('scroll') private messagesContainer: ElementRef;
+  messageInput: '';
   currentUser: IUser;
   subscription: Subscription = new Subscription();
 
@@ -22,11 +23,10 @@ export class MessagesComponent implements AfterViewChecked, OnDestroy {
     });
   }
 
-  sendMessage(event: Event): void {
-    const message = (event.target as HTMLInputElement).value;
+  sendMessage(message: string = ''): void {
     if (message.trim()) {
       this.usersService.addMessage(this.currentUser.id, message);
-      (event.target as HTMLInputElement).value = '';
+      this.messageInput = '';
     }
   }
 

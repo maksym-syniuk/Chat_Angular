@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ScrollingModule } from '@angular/cdk/scrolling';
@@ -24,9 +25,10 @@ import { SearchPipe } from './shared/pipes/search.pipe';
     SearchPipe
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
-    ScrollingModule
+    ScrollingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

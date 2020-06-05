@@ -1,3 +1,5 @@
+import { IMessage } from './../interfaces/IMessage';
+import { ChuckNorrisService } from './chuck-norris.service';
 import { IUser } from './../interfaces/IUser';
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
@@ -125,12 +127,14 @@ export class UsersService {
         {
           sender: 'author',
           date: new Date('2020-05-11T16:27:31'),
-          message: 'I’m enjoying my life to the fullest, I play with my siblings in the park near to my place as everyone including my friends is staying inside due to this Coronavirus outbreak. I don’t know why people are so scared!'
+          message: `I’m enjoying my life to the fullest, I play with my siblings in the park near to my place as everyone
+           including my friends is staying inside due to this Coronavirus outbreak. I don’t know why people are so scared!`
         },
         {
           sender: 'user',
           date: new Date('2020-05-11T16:28:31'),
-          message: 'Really! I also feel like coming downstairs to accompany you but aren’t you aware of the lockdown orders imposed by the government?'
+          message: `Really! I also feel like coming downstairs to accompany you but aren’t you aware of the lockdown orders
+           imposed by the government?`
         },
       ]
     },
@@ -281,6 +285,8 @@ export class UsersService {
   currentUser: IUser;
   currentUserChange: Subject<IUser> = new Subject<IUser>();
 
+  constructor(private chuckNorrisService: ChuckNorrisService) { }
+
   getUsersArray() {
     return [...this.users];
   }
@@ -301,5 +307,18 @@ export class UsersService {
       message
     };
     this.users[idUser].messages.push(newMessage);
+
+    this.addAnswer(idUser);
+  }
+
+  addAnswer(idUser: number) {
+    this.chuckNorrisService.fetchMessages().subscribe(res => {
+      const answerMessage: IMessage = {
+        sender: 'user',
+        date: new Date(),
+        message: res
+      };
+      this.users[idUser].messages.push(answerMessage);
+    });
   }
 }

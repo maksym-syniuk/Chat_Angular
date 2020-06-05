@@ -1,6 +1,6 @@
 import { UsersService } from './../../../shared/services/users.service';
 import { IUser } from './../../../shared/interfaces/IUser';
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-chat',
